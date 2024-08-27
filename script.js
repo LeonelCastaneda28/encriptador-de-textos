@@ -2,7 +2,6 @@ var botonEncriptar = document.querySelector(".boton__encriptar");
 var botonDesencriptar = document.querySelector(".boton__desencriptar");
 var muneco = document.querySelector(".contenedor__muneco");
 var contenedorParrafo = document.querySelector(".contenedor__parrafo");
-var botonCopiar = document.querySelector(".boton__copiar");
 var resultado = document.querySelector(".texto__resultado");
 
 botonEncriptar.onclick = encriptar;
@@ -11,11 +10,11 @@ botonDesencriptar.onclick = desencriptar;
 function encriptar() {
     ocultarAdelante();
     var cajaTexto = recuperarTexto()
-    resultado.textContent = encriptarTexto (cajaTexto);
+    resultado.textContent = encriptarTexto(cajaTexto);
 
 }
 
-function desencriptar() {
+function desencriptar(){
     ocultarAdelante();
     var cajaTexto = recuperarTexto()
     resultado.textContent = desencriptarTexto (cajaTexto);
@@ -32,13 +31,13 @@ function desencriptar() {
         function ocultarAdelante() {
 
             muneco.classList.add("ocultar");
-            contenedorParrafo.classList.add("ocultar");
+            contenedor.classList.add("ocultar");
         }
 
 
         function encriptarTexto(mensaje){
 
-            var texto =mensaje;
+            var texto = mensaje;
             var textoFinal = "";
 
 
@@ -87,34 +86,34 @@ function desencriptar() {
             var textoFinal = "";
 
 
-            for (var i = 0; i < texto.length; i++) {
+            for (var i = 0; i < texto.length; i++){
                 if (texto[i] == "a"){
                     textoFinal = textoFinal + "a";
-                    i = i + 1;
+                    i = i+1;
                 }
 
                 else if (texto[i] == "e") {
 
                     textoFinal = textoFinal + "e"
-                    i = i + 4;
+                    i = i+4;
                 }
 
                 else if(texto[i] == "i"){
 
                     textoFinal == textoFinal + "i"
-                    i = i + 3;
+                    i = i+3;
                 }
 
                 else if(texto[i] == "o"){
 
                     textoFinal == textoFinal + "o"
-                    i = i + 3;
+                    i = i+3;
                 }
 
                 else if(texto[i] == "u"){
 
                     textoFinal == textoFinal + "u"
-                    i = i + 3;
+                    i = i+3;
                 }
 
                 else {
