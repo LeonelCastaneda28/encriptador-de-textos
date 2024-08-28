@@ -40,13 +40,13 @@
        position: absolute;
        left: 200px;
        top: 100px;
-       padding-left: 100px;
+       padding-left:100px;
        width: 1080px;
        height: 600px;
     }
 
     .caja__texto{
-        width: 80%;
+        width: 50%;
         height: 100%;
         border: none;
         background-color: #E5E5E5;
@@ -179,9 +179,10 @@
         padding: 0;
         box-sizing: border-box;
         margin-left: 25px;
+        color: #000000;
     }
     
-    .texto__resultado p{
+    .contenedor__resultado p{
         color: #495057;
         font-size: 25px;
     }

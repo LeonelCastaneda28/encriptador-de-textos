@@ -1,7 +1,7 @@
 var botonEncriptar = document.querySelector(".boton__encriptar");
 var botonDesencriptar = document.querySelector(".boton__desencriptar");
 var muneco = document.querySelector(".contenedor__muneco");
-var contenedorParrafo = document.querySelector(".contenedor__parrafo");
+var contenedor = document.querySelector(".contenedor__parrafo");
 var resultado = document.querySelector(".texto__resultado");
 
 botonEncriptar.onclick = encriptar;
@@ -23,7 +23,7 @@ function desencriptar(){
 
     function recuperarTexto() {
 
-        var cajaTexto = document.querySelector(".cajaTexto")
+        var cajaTexto = document.querySelector(".caja__texto")
         return cajaTexto.value
     }
 
@@ -81,52 +81,44 @@ function desencriptar(){
 
 
         function desencriptarTexto(mensaje){
-
-            var texto =mensaje;
+            var texto = mensaje;
             var textoFinal = "";
-
-
-            for (var i = 0; i < texto.length; i++){
-                if (texto[i] == "a"){
-                    textoFinal = textoFinal + "a";
+        
+            for(var i = 0; i < texto.length; i++){
+                if(texto[i] == "a"){
+                    textoFinal = textoFinal + "a"
                     i = i+1;
                 }
-
-                else if (texto[i] == "e") {
-
+                else if(texto[i] == "e"){
                     textoFinal = textoFinal + "e"
                     i = i+4;
                 }
-
                 else if(texto[i] == "i"){
-
-                    textoFinal == textoFinal + "i"
+                    textoFinal = textoFinal + "i"
                     i = i+3;
                 }
-
                 else if(texto[i] == "o"){
-
-                    textoFinal == textoFinal + "o"
+                    textoFinal = textoFinal + "o"
                     i = i+3;
                 }
-
+                
                 else if(texto[i] == "u"){
-
-                    textoFinal == textoFinal + "u"
+                    textoFinal = textoFinal + "u"
                     i = i+3;
                 }
-
-                else {
-                    textoFinal = textoFinal + texto[i]
+                else{
+                    textoFinal = textoFinal + texto[i];
                 }
-
+                
             }
-            
+        
             return textoFinal;
+        
         }
 
         const btnCopiar = document.querySelector(".boton__copiar");
         btnCopiar.addEventListener("click", copiar = () => {
             var contenido = document.querySelector(".texto__resultado").textContent;
             navigator.clipboard.writeText(contenido);
-        })  
+             
+        });
